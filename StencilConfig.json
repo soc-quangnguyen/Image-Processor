@@ -1,0 +1,136 @@
+{
+    "nodes":[
+        {
+            "type": "processor.Display",
+            "name": "Display-Custom",
+            "inputSettings": [
+                {
+                    "name": "Image",
+                    "type": "image",
+                    "property": "image"
+                }
+            ],
+            "size": {
+                "width": 500,
+                "height": 75
+            },
+            "attrs": {
+                "image": {
+                    "cursor": "pointer",
+                    "width": 40,
+                    "height": 40,
+                    "x": 60,
+                    "y": 29,
+                    "href": "assets/defaultImage.png",
+                    "preserveAspectRatio": "xMidYMid"
+                }
+            },
+            "group": "basic"
+        },
+        {
+            "type": "processor.Division",
+            "name": "Divide",
+            "group": "math",
+            "size": {
+                "width": 120
+            },
+            "inputSettings": [
+                {
+                    "name": "A",
+                    "type": "number",
+                    "property": "a",
+                    "defaultValue": 0
+                },
+                {
+                    "name": "D",
+                    "type": "number",
+                    "property": "b",
+                    "defaultValue": 0
+                }
+            ],
+            "outputSettings": [
+                {
+                    "name": "Result",
+                    "type": "number"
+                }
+            ]
+        }
+        ,
+        {
+            "type": "processor.Grayscale",
+            "name": "Greyscale",
+            "group": "filters",
+            "properties": {
+                "keepAlpha": true
+            },
+            "size": {
+                "width": 120
+
+            },
+            "inputSettings": [
+                {
+                    "name": "Image",
+                    "type": "image",
+                    "property": "image"
+                },
+                {
+                    "name": "Keep alpha",
+                    "type": "boolean",
+                    "property": "keepAlpha"
+                }
+            ],
+            "outputSettings": [
+                {
+                    "name": "Image",
+                    "type": "image"
+                }
+            ]
+        },
+        {
+            "size": {
+                "width": 150,
+                "height": 80
+            },
+            "type": "processor.NumberInput",
+            "name": "Number",
+            "group": "inputs",
+            "outputSettings": [{
+                "name": "Number",
+                "type": "number",
+                "defaultValue": 0
+            }],
+            "attrs": {
+                "foreignObject": {
+                    "width": "calc(w - 80)",
+                    "height": "calc(h - 32)",
+                    "x": 15,
+                    "y": 29
+                },
+                "input": {
+                    "props": {
+                        "value": 0
+                    }
+                }
+            }
+        },
+        {
+            "type": "processor.Sepia",
+            "name": "Sepia",
+            "group": "filters",
+            "size": {
+                "width": 120
+            },
+            "inputSettings": [{
+                "name": "Image",
+                "type": "image",
+                "property": "image"
+            }],
+            "outputSettings": [{
+                "name": "Image",
+                "type": "image"
+            }]
+        }
+
+    ]
+}
+  
